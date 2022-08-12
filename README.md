@@ -6,8 +6,11 @@
 
 ## Instruction
 
-Modify the sample code in the previous section such that we can display the
-integer value we have assigned based on the value of the `flag` variable.
+The starter code that we are given will currently not work in this state.
+Consider the scope of the variables and modify the following code so that it
+will compile. We want to print out the number according to the value of the
+`flag` variable. Therefore, we must ensure that when we make the adjustments
+needed that the appropriate number is displayed to the user.
 
 ```java
 public class StudentGame {
@@ -24,33 +27,3 @@ public class StudentGame {
     }
 }
 ```
-
-## Walkthrough
-
-In order to make this work, we have to make two changes:
-
-1. Separate the declaration and the assignment of the integer variable we use to
-   track the number value we assign
-2. Use a single variable for both the `true` case and the `false` case
-
-```java
-public class StudentGame {
-    public static void main(String[] args) {
-        boolean flag = false;
-        int number;
-        if (flag) {
-            // do something when flag is true
-            number = 12;
-        } else {
-            // do something else when flag is false
-            number = 5;
-        }
-        System.out.println(number);
-    }
-}
-```
-
-Now that my `number` variable is declared inside the method scope, I can access
-it from both the scope of the `if` statement and the scope of the `else`
-statement, and I can display its value in the terminal when I'm done with the
-conditional logic.
